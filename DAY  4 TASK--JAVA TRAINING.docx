@@ -1,0 +1,413 @@
+DAY  4 TASK--JAVA TRAINING 
+----------------------------------------------> FOR LOOP
+1. Print Numbers from 1 to 50
+
+public class main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 50; i++) {
+            System.out.println(i);
+        }
+    }
+}
+=======================================================================================================================================================================
+
+2. Print all odd numbers from 1 to 100. 
+
+public class main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i+=2) {
+            System.out.println(i);
+        }
+    }
+}
+=======================================================================================================================================================================
+
+3.Find the sum of numbers from 1 to 100. 
+
+public class main {
+    public static void main(String[] args) {
+        int sum = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+
+        System.out.println("Sum: " + sum);
+    }
+}
+
+=======================================================================================================================================================================
+4.	Print the multiplication table of a number entered by the user.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+    }
+}
+=======================================================================================================================================================================
+5.	Find the factorial of a number. 
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        long fact = 1;
+
+        if (n < 0) {
+            System.out.println("Factorial is not defined for negative numbers");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+
+            System.out.println("Factorial: " + fact);
+        }
+    }
+}
+=======================================================================================================================================================================
+6.	Count how many numbers between 1 and 100 are divisible by 7. 
+
+public class Main {
+    public static void main(String[] args) {
+        int count = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Count: " + count);
+    }
+}
+=======================================================================================================================================================================
+7.	Print numbers from 100 down to 1. 
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 100; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+}
+=======================================================================================================================================================================
+8.	Calculate the sum of all even numbers from 1 to N. 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 2; i <= n; i += 2) {
+            sum = sum + i;
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+=======================================================================================================================================================================
+----------------------------------------------> WHILE LOOP
+
+1. Print Numbers from 1 to 20 Using While Loop
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 1;
+
+        while (i <= 20) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+=======================================================================================================================================================================
+
+2. Find the Sum of the Digits of a Number
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int sum = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum = sum + digit;
+            n = n / 10;
+        }
+
+        System.out.println("Sum: " + sum);
+
+        sc.close();
+    }
+}
+=======================================================================================================================================================================
+
+3. Count the Digits in a Positive Integer
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int n = sc.nextInt();
+
+        int count = 0;
+
+        while (n > 0) {
+            count++;
+            n = n / 10;
+        }
+
+        System.out.println("Count: " + count);
+
+        sc.close();
+    }
+}
+=======================================================================================================================================================================
+4. Reverse a Positive Integer
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int reverse = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println("Reverse: " + reverse);
+
+        sc.close();
+    }
+}
+=======================================================================================================================================================================
+5. Check Whether a Number Is a Palindrome
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int original = n;
+        int reverse = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        if (original == reverse) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a Palindrome");
+        }
+    }
+}
+=======================================================================================================================================================================
+6. Find the Product of the Digits of a Number
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int product = 1;
+
+        while (n > 0) {
+            int digit = n % 10;
+            product = product * digit;
+            n = n / 10;
+        }
+
+        System.out.println("Product: " + product);
+
+        sc.close();
+    }
+}
+=======================================================================================================================================================================
+7. Check Whether a Number Is an Armstrong Number
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int original = n;
+        int sum = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum = sum + (digit * digit * digit);
+            n = n / 10;
+        }
+
+        if (original == sum) {
+            System.out.println("Armstrong Number");
+        } else {
+            System.out.println("Not an Armstrong Number");
+        }
+    }
+}
+=======================================================================================================================================================================
+
+–------------------------------------------> Do-While Loop
+
+1. Print Numbers from 1 to 10
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 1;
+
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= 10);
+    }
+}
+=======================================================================================================================================================================
+2. Print a Menu at Least Once
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("1. Add");
+            System.out.println("2. Subtract");
+            System.out.println("3. Exit");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+        } while (choice != 3);
+
+        System.out.println("Program ended");
+
+        sc.close();
+    }
+}
+=======================================================================================================================================================================
+
+3. Ask the User to Enter a PIN Until the Correct PIN Is Entered
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int pin;
+        do {
+            System.out.print("Enter PIN: ");
+            pin = sc.nextInt();
+        } while (pin != 1234);
+        System.out.println("Correct PIN");
+    }
+}
+=======================================================================================================================================================================
+
+4. Create a Calculator Menu That Repeats Until the User Chooses Exit
+
+iimport java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int choice;
+        int a, b;
+
+        do {
+            System.out.println("\n1. Addition");
+            System.out.println("2. Subtraction");
+            System.out.println("3. Multiplication");
+            System.out.println("4. Division");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            if (choice >= 1 && choice <= 4) {
+                System.out.print("Enter two numbers: ");
+                a = sc.nextInt();
+                b = sc.nextInt();
+
+                if (choice == 1) {
+                    System.out.println("Sum: " + (a + b));
+                } else if (choice == 2) {
+                    System.out.println("Difference: " + (a - b));
+                } else if (choice == 3) {
+                    System.out.println("Product: " + (a * b));
+                } else if (choice == 4) {
+                    if (b != 0) {
+                        System.out.println("Division: " + ((double) a / b));
+                    } else {
+                        System.out.println("Error: Cannot divide by zero.");
+                    }
+                }
+
+            } else if (choice != 5) {
+                System.out.println("Invalid choice");
+            }
+
+        } while (choice != 5);
+
+        System.out.println("Calculator closed");
+
+        sc.close();
+    }
+}
+
+=======================================================================================================================================================================
+
+5. Demonstrate the Difference Between While and Do-While When the Condition Is Initially False
